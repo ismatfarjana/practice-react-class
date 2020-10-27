@@ -11,11 +11,12 @@ class SearchBar extends React.Component {
     event.preventDefault();
     //to prevent default while submiting
     // make sure to call call back from parent component
+    this.props.onSubmitForm(this.state.term);
   };
 
   render() {
     return (
-      <div ClassName="searchbbar">
+      <div className="searchbbar">
         <form onSubmit={this.onFormSubmit}>
           <label>Search here</label>
           {/* //turn this to controlled input  */}
