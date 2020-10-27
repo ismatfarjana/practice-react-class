@@ -5,12 +5,20 @@ import Header from "./Header";
 import youtube from "../apis/youtube";
 
 class App extends React.Component {
-  onTermSubmit = term => {
+  state = { videos: [] };
+
+  onTermSubmit = async term => {
     // console.log(term);
-    youtube.get("/search", {
+    const response = await youtube.get("/search", {
       params: {
         q: term
       }
+    });
+    console.log(response);
+    // response.data.items;
+    this.setState({
+      videos: response.data.items, // the list of videos
+      selectedVideo: response.data.items[0] //setting one video on video player
     });
   };
 
@@ -23,6 +31,7 @@ class App extends React.Component {
         <div>
           <h2>Practice React: Youtube</h2>
           <SearchBar onSubmitForm={this.onTermSubmit} />
+          <p>{this.state.videos.length} videos found on search</p>
         </div>
       </div>
     );
