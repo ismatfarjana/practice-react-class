@@ -3,6 +3,7 @@
 html {
   font-family: "Open Sans", sans-serif;
   text-align: center;
+  font-size: calc(15px + 2vmin);
 }
 h2 {
   color: rgb(131, 18, 103);
@@ -11,7 +12,8 @@ h2 {
 form {
   display: flex;
   flex-flow: column;
-  max-width: 60vw;
+  max-width: calc(60vw + 2vmin);
+  height: auto;
   margin: auto;
   margin: 0 30px;
   text-align: left;
@@ -21,8 +23,9 @@ form {
 }
 
 input {
-  height: 20px;
+  height: calc(15px + 2vmin);
   margin: 5px 3px;
+  padding: 0 10px;
   border: 2px solid rgba(141, 137, 137, 0.507);
   border-radius: 4px;
 }
