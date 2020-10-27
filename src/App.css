@@ -3,22 +3,36 @@
 html {
   font-family: "Open Sans", sans-serif;
   text-align: center;
-  font-size: calc(15px + 2vmin);
+  font-size: calc(10px + 2vmin);
 }
 h2 {
-  color: rgb(131, 18, 103);
+  color: rgb(209, 5, 15);
+  font-size: calc(40px + 1vmin);
 }
 
+.main {
+  display: flex;
+  flex-flow: row;
+}
+.logo {
+  width: auto;
+  height: calc(160px + 1vmin);
+  padding: 0 30px;
+  /* margin: 0 20px; */
+}
+.searchbbar {
+  margin-bottom: 30px;
+}
 form {
   display: flex;
   flex-flow: column;
   max-width: calc(60vw + 2vmin);
   height: auto;
   margin: auto;
-  margin: 0 30px;
+  margin-bottom: 30px;
   text-align: left;
   border: 3px solid rgba(141, 137, 137, 0.507);
-  padding: 15px;
+  padding: calc(2px + 1vmin);
   border-radius: 4px;
 }
 
