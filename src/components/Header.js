@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "./../assets/logo.gif"; // Tell webpack this JS file uses this image
+import logo from "./../assets/logo.png"; // Tell webpack this JS file uses this image
 import "../App.css";
 
 const Header = () => {

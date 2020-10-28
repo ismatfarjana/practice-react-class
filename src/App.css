@@ -7,21 +7,44 @@ html {
 }
 h2 {
   color: rgb(209, 5, 15);
-  font-size: calc(40px + 1vmin);
+  font-size: calc(2vw + 1vmin);
 }
 
 .main {
   display: flex;
-  flex-flow: row;
+  flex-flow: column;
 }
 .logo {
   width: auto;
-  height: calc(160px + 1vmin);
-  padding: 0 30px;
+  height: calc(4vw + 1vmin);
+  padding: 20px 30px 0 30px;
+  margin: auto;
   /* margin: 0 20px; */
 }
 .searchbbar {
   margin-bottom: 30px;
+  cursor: text;
+}
+.list {
+  display: flex;
+  flex-flow: column;
+  padding-left: calc(40vw + 1vmin);
+}
+.eachvideo {
+  width: calc(30vw + 1vmin);
+  margin: auto;
+  font-size: calc(1px + 2vmin);
+  margin-bottom: 20px;
+  /* border-bottom: 1px solid gray; */
+  /* background-color: rgba(241, 201, 201, 0.493); */
+  cursor: pointer;
+}
+.title {
+  width: calc(20vw + 1vmin);
+  margin: auto;
+}
+img {
+  width: calc(20vw + 1vmin);
 }
 form {
   display: flex;

@@ -3,8 +3,8 @@ import VideoList from "./VideoList";
 
 const VideoItem = ({ video }) => {
   return (
-    <div>
-      <div>{video.snippet.title}</div>
+    <div className="eachvideo">
+      <div className="title">{video.snippet.title}</div>
       <img src={video.snippet.thumbnails.medium.url} />
     </div>
   );
