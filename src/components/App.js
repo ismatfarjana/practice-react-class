@@ -4,6 +4,7 @@ import "../App.css";
 import Header from "./Header";
 import youtube from "../apis/youtube";
 import VideoList from "./VideoList";
+import VideoDetails from "./VideoDetails";
 
 class App extends React.Component {
   state = { videos: [], selectedVideo: null };
@@ -24,7 +25,8 @@ class App extends React.Component {
   };
 
   onVideoSelect = video => {
-    console.log("from the app", video);
+    // console.log("from the app", video);
+    this.setState({ selectedVideo: video });
   };
 
   render() {
@@ -38,10 +40,13 @@ class App extends React.Component {
           <SearchBar onSubmitForm={this.onTermSubmit} />
           {/* <p>{this.state.videos.length} videos found on search</p> */}
           {/* we haveto give the vidooList the list of video object we fetched from the api as props video */}
-          <VideoList
-            onVideoSelect={this.onVideoSelect}
-            videos={this.state.videos}
-          />
+          <div className="bodypart">
+            <VideoDetails video={this.state.selectedVideo} />
+            <VideoList
+              onVideoSelect={this.onVideoSelect}
+              videos={this.state.videos}
+            />
+          </div>
         </div>
       </div>
     );

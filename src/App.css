@@ -28,7 +28,6 @@ h2 {
 .list {
   display: flex;
   flex-flow: column;
-  padding-left: calc(40vw + 1vmin);
 }
 .eachvideo {
   width: calc(30vw + 1vmin);
@@ -43,6 +42,27 @@ h2 {
   width: calc(20vw + 1vmin);
   margin: auto;
 }
+.detalistitle {
+  font-size: calc(10px + 1vmin);
+}
+
+.bodypart {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+}
+
+.detalis {
+  width: calc(50vw + 1vmin);
+}
+
+.detalis-img {
+  width: calc(50vw + 1vmin);
+}
+p {
+  font-size: calc(7px + 1vmin);
+}
+
 img {
   width: calc(20vw + 1vmin);
 }
