@@ -54,10 +54,14 @@ h2 {
 
 .detalis {
   width: calc(50vw + 1vmin);
+  display: flex;
+  flex-flow: column;
+  text-align: left;
 }
 
 .detalis-img {
   width: calc(50vw + 1vmin);
+  height: 30vw;
 }
 p {
   font-size: calc(7px + 1vmin);
