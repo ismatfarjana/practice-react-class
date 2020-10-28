@@ -3,6 +3,7 @@ import SearchBar from "./SearchBar";
 import "../App.css";
 import Header from "./Header";
 import youtube from "../apis/youtube";
+import VideoList from "./VideoList";
 
 class App extends React.Component {
   state = { videos: [] };
@@ -31,7 +32,9 @@ class App extends React.Component {
         <div>
           <h2>Practice React: Youtube</h2>
           <SearchBar onSubmitForm={this.onTermSubmit} />
-          <p>{this.state.videos.length} videos found on search</p>
+          {/* <p>{this.state.videos.length} videos found on search</p> */}
+          {/* we haveto give the vidooList the list of video object we fetched from the api as props video */}
+          <VideoList videos={this.state.videos} />
         </div>
       </div>
     );
